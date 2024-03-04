@@ -1,0 +1,15 @@
+.results_container{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    // gap: 10px;
+}
+.filter_container{
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px;
+    gap: 20px;
+    .dropdown_container{
+        width: 200px;
+    }
+}
