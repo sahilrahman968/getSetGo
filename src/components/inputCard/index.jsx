@@ -46,7 +46,7 @@ const InputCard = ({ setResults }) => {
         setDestination(temp);
     }
     return (
-        <Card style={{ padding: "40px", margin: "40px" }}>
+        <Card style={{ padding: "20px", margin: "10px" }}>
             <div className={styles.container}>
                 <div className={styles.location_container}>
                     <AutocompleteSearch options={locations} label="Origin" value={origin} onSubmit={(value) => setOrigin(value)} />
