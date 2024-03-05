@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./FlightCard.module.scss"
 import Card from '../card'
 import airline from "../../assets/images/flight.png"
+import { convertTo24HourFormat } from '../../helper'
 
 const FlightCard = ({ details }) => {
     return (
@@ -17,7 +18,7 @@ const FlightCard = ({ details }) => {
                     </div>
                 </div>
                 <div className={styles.section_2}>
-                    <span className={styles.time}>19:35</span>
+                    <span className={styles.time}>{convertTo24HourFormat(details?.departureTime)}</span>
                     <span className={styles.text}>{details?.origin}</span>
                 </div>
                 <div className={styles.section_3}>
@@ -25,7 +26,7 @@ const FlightCard = ({ details }) => {
                     <span className={styles.duration}>Duration</span>
                 </div>
                 <div className={styles.section_4}>
-                    <span className={styles.time}>19:35</span>
+                    <span className={styles.time}>{convertTo24HourFormat(details?.arrivalTime)}</span>
                     <span className={styles.text}>{details?.destination}</span>
                 </div>
                 <div className={styles.section_7}>

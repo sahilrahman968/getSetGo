@@ -28,3 +28,9 @@ export const sortByCheapestFirst = (flights) => {
 
     return flights;
 }
+
+export const convertTo24HourFormat = (dateTimeString) => {
+    const [datePart, timePart] = dateTimeString.split('T');
+    const [hour, minute, second] = timePart.split(':');
+    return `${hour.padStart(2, '0')}:${minute}`;
+}
